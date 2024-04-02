@@ -6,16 +6,14 @@ import MyJob from "../pages/Myjob";
 import { useTheme } from '../themes/ThemeContext';
 
 function RoutesApp() {
-    const tema= useTheme();
+    const tema = useTheme();
     return (
-        
+
         <Router>
             <section className={`App ${tema}`}></section>
-                <Navbar></Navbar>
-                
+            <Navbar></Navbar>
+
             <Routes>
-         
-        
                 <Route path="/" element={<Home />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/myjob" element={<MyJob />} />
@@ -28,11 +26,11 @@ export default RoutesApp
 
 function Navbar() {
     return (
-      <nav>
+        <nav>
             <Link to="/">Home</Link>
             <Link to="/profile">Profile</Link>
             <Link to="/myjob">MyJob</Link>
             <Boton></Boton>
-      </nav>
+        </nav>
     )
-  }
+}
