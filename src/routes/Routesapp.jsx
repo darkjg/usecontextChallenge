@@ -3,12 +3,19 @@ import Boton from '../components/Button';
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import MyJob from "../pages/Myjob";
+import { useTheme } from '../themes/ThemeContext';
+
 function RoutesApp() {
+    const tema= useTheme();
     return (
+        
         <Router>
+            <section className={`App ${tema}`}></section>
                 <Navbar></Navbar>
+                
             <Routes>
-            
+         
+        
                 <Route path="/" element={<Home />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/myjob" element={<MyJob />} />

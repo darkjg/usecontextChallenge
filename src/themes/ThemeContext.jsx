@@ -5,6 +5,7 @@ export const ThemeProvider = ({ children }) => {
     const [tema, setTema] = useState('dark');
 
     const cambioTema=()=>{
+       console.log(tema)
         if(tema=="dark"){
             setTema("light")
         }else{
