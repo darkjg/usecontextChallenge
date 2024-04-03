@@ -7,18 +7,22 @@ import { useTheme } from '../themes/ThemeContext';
 
 function RoutesApp() {
     const tema = useTheme();
+    console.log(tema)
     return (
 
         <Router>
-            <section className={`App ${tema}`}></section>
-            <Navbar></Navbar>
+            <section className={`App ${tema.tema}`}>
+                <div className='content'>
+                <Navbar></Navbar>
 
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/myjob" element={<MyJob />} />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/myjob" element={<MyJob />} />
 
-            </Routes>
+                </Routes>
+                </div>
+            </section>
         </Router>
     )
 }
